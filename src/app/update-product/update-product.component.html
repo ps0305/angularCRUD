@@ -1,3 +1,28 @@
-<p>
-  update-product works!
-</p>
+<a routerLink="/"> Back</a>
+
+<h2>
+  Update Product
+</h2>
+<form id="formNewProduct" name='formNewProduct' #productData="ngForm" (ngSubmit)="addNewProduct(productData.value)">
+  <div class="form-group">
+    <label>Product ID:</label>
+    <input class="form-control" type="number" name="p_id" id="p_id" placeholder="ProductID" ngModel>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <label>Product Name:</label>
+    <input class="form-control" type="text" name="p_name" id="p_name" placeholder="ProductName" ngModel>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <label>Product Cost:</label>
+    <input class="form-control" type="number" name="p_cost" id="p_cost" placeholder="ProductCost" ngModel>
+  </div>
+  <br>
+
+  <input class="ml-2 btn btn-warning" type="submit" value="Update Product">
+</form>
+<h3 class="bg-success" *ngIf="isAdded">{{confirmationString}}</h3>

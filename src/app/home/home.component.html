@@ -13,12 +13,12 @@
           <td>{{product.p_id}}</td>
           <td>{{product.p_name}}</td>
           <td>{{product.p_cost}}</td>
-          <td class="ml-2 btn btn-danger" (click)="deleteProduct(product.id)">
+          <button type="button" class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">
             <a>Delete</a>
-          </td>
-          <td class="btn btn-outline-warning" [routerLink]="['/updateProduct', product.id]">
+          </button>
+          <button type="button" class="btn btn-outline-warning btn-sm" [routerLink]="['/updateProduct', product.id]">
             <a>Update</a>
-          </td>
+          </button>
         </tr>
       </table>
     </div>
