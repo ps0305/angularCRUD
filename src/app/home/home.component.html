@@ -1,7 +1,7 @@
 <a routerLink="/product"> + Add New Product</a>
 <div class="card-deck">
   <div class="card">
-    <div class="card-body bg-success text-white">
+    <div class="card-body text-primary p-2 m-1 w-50">
       <h1>Products</h1>
       <table>
         <th>ID</th>
@@ -13,6 +13,12 @@
           <td>{{product.p_id}}</td>
           <td>{{product.p_name}}</td>
           <td>{{product.p_cost}}</td>
+          <td class="ml-2 btn btn-danger" (click)="deleteProduct(product.id)">
+            <a>Delete</a>
+          </td>
+          <td class="btn btn-outline-warning" [routerLink]="['/updateProduct', product.id]">
+            <a>Update</a>
+          </td>
         </tr>
       </table>
     </div>
