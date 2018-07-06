@@ -1,26 +1,44 @@
-<a routerLink="/product"> + Add New Product</a>
-<div class="card-deck">
-  <div class="card">
-    <div class="card-body text-primary p-2 m-1 w-50">
-      <h1>Products</h1>
-      <table>
-        <th>ID</th>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>Product Cost</th>
-        <tr *ngFor="let product of products">
-          <td>{{product.id}}</td>
-          <td>{{product.p_id}}</td>
-          <td>{{product.p_name}}</td>
-          <td>{{product.p_cost}}</td>
-          <button type="button" class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">
-            <a>Delete</a>
-          </button>
-          <button type="button" class="btn btn-outline-warning btn-sm" [routerLink]="['/updateProduct', product.id]">
-            <a>Update</a>
-          </button>
-        </tr>
-      </table>
+<a class="btn btn-warning btn-lg" routerLink="/product"> + Add New Product</a>
+
+<div class="p-1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header btn-warning text-white">
+            <h2 class="card-title">Products</h2>
+          </div>
+          <div class="card-body">
+            <table class="table">
+              <thead class="table-dark">
+                <tr>
+                  <th>ID</th>
+                  <th>Product ID</th>
+                  <th>Product Name</th>
+                  <th>Product Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of products" class="text-center">
+                  <td>{{product.id}}</td>
+                  <td>{{product.p_id}}</td>
+                  <td>{{product.p_name}}</td>
+                  <td>{{product.p_cost}}</td>
+                  <td>
+
+                    <a class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">Delete</a>
+
+                  </td>
+                  <td>
+                    <a class="btn btn-outline-warning btn-sm" [routerLink]="['/updateProduct', product.id]">Update</a>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

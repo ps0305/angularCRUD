@@ -1,28 +1,34 @@
-<a routerLink="/"> Back</a>
-
-<h2>
-  Add New Product
-</h2>
-<form id="formNewProduct" name='formNewProduct' #productData="ngForm" (ngSubmit)="addNewProduct(productData.value)">
-  <div class="form-group">
-    <label>Product ID:</label>
-    <input class="form-control" type="number" name="p_id" id="p_id" placeholder="ProductID" ngModel>
+<a class="btn btn-primary btn-lg" routerLink="/"> Back</a>
+<div class="card col-md-4">
+  <div class="card-header">
+    <h2>
+      Add New Product
+    </h2>
   </div>
+  <div class="card-body">
+    <form id="formNewProduct" name='formNewProduct' #productData="ngForm" (ngSubmit)="addNewProduct(productData.value)">
+      <div class="form-group">
+        <label>Product ID:</label>
+        <input class="form-control" type="number" name="p_id" id="p_id" placeholder="ProductID" ngModel>
+      </div>
 
-  <br>
+      <br>
 
-  <div class="form-group">
-    <label>Product Name:</label>
-    <input class="form-control" type="text" name="p_name" id="p_name" placeholder="ProductName" ngModel>
+      <div class="form-group">
+        <label>Product Name:</label>
+        <input class="form-control" type="text" name="p_name" id="p_name" placeholder="ProductName" ngModel>
+      </div>
+      <br>
+
+      <div class="form-group">
+        <label>Product Cost:</label>
+        <input class="form-control" type="number" name="p_cost" id="p_cost" placeholder="ProductCost" ngModel>
+      </div>
+      <br>
+
+      <input class="ml-2 btn btn-success" type="submit" value="Add Product">
+    </form>
+    <h3 class="bg-success" *ngIf="isAdded">{{confirmationString}}</h3>
+
   </div>
-  <br>
-
-  <div class="form-group">
-    <label>Product Cost:</label>
-    <input class="form-control" type="number" name="p_cost" id="p_cost" placeholder="ProductCost" ngModel>
-  </div>
-  <br>
-
-  <input class="ml-2 btn btn-success" type="submit" value="Add Product">
-</form>
-<h3 class="bg-success" *ngIf="isAdded">{{confirmationString}}</h3>
+</div>
