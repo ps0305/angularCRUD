@@ -21,6 +21,8 @@ export class UpdateProductComponent implements OnInit {
     private route: ActivatedRoute,
     private http: Http
   ) {}
+  confirmationString: string = 'Product updated successfully !!';
+  isUpdated: boolean = false;
 
   updateProduct = function(product) {
     this.productObj = {
@@ -43,6 +45,7 @@ export class UpdateProductComponent implements OnInit {
     this.http
       .get('http://localhost:5555/products')
       .subscribe((res: Response) => {
+        this.isUpdated = true;
         this.products = res.json();
         for (var i = 0; i < this.products.length; i++) {
           if (parseInt(this.products[i].id) === this.id) {
