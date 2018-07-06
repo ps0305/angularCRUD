@@ -13,23 +13,23 @@
           </h2>
         </div>
         <div class="card-body">
-          <form id="formNewProduct" name='formNewProduct' #productData="ngForm" (ngSubmit)="addNewProduct(productData.value)">
+          <form id="formNewProduct" name='formNewProduct' #productData="ngForm" (ngSubmit)="updateProduct(productData.value)">
             <div class="form-group">
               <label>Product ID:</label>
-              <input class="form-control" type="number" name="p_id" id="p_id" placeholder="ProductID" ngModel>
+              <input class="form-control" type="number" name="p_id" id="p_id" placeholder="p_id" [(ngModel)]="data.p_id" ngModel>
             </div>
 
             <br>
 
             <div class="form-group">
               <label>Product Name:</label>
-              <input class="form-control" type="text" name="p_name" id="p_name" placeholder="ProductName" ngModel>
+              <input class="form-control" type="text" name="p_name" id="p_name" placeholder="p_name" [(ngModel)]="data.p_name" ngModel>
             </div>
             <br>
 
             <div class="form-group">
               <label>Product Cost:</label>
-              <input class="form-control" type="number" name="p_cost" id="p_cost" placeholder="ProductCost" ngModel>
+              <input class="form-control" type="number" name="p_cost" id="p_cost" placeholder="ProductCost" [(ngModel)]="data.p_cost" ngModel>
             </div>
             <br>
 
