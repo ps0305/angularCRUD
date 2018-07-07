@@ -14,6 +14,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ![crud3](https://user-images.githubusercontent.com/34129569/42379683-253e3e36-8149-11e8-87a4-0697d6d2a2b9.JPG)
 
 
+### Get a full fake REST API with zero coding in less than 30 seconds [json-server](https://github.com/typicode/json-server)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
